@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { GetListRoom } from '../../services/RoomServices';
 import { Badge, Button, Card, Col, Row } from 'antd';
 import { AppstoreOutlined, UnorderedListOutlined } from '@ant-design/icons';
@@ -7,18 +7,21 @@ import RoomTable from './RoomTable';
 const ListRoom = () => {
     const [rooms, setRooms] = useState([]);
     const [isGrid, setIsGrid] = useState(true);
-    useEffect(() => {
+    const fetchApi = useCallback(async () => {
+        const response = await GetListRoom();
+        if (response) {
+            setRooms(response);
 
-        const fetchApi = async () => {
-            const response = await GetListRoom();
-            if (response) {
-                setRooms(response);
-
-            }
-            console.log(response);
         }
-        fetchApi();
+
     }, []);
+    useEffect(() => {
+        // eslint-disable-next-line
+        fetchApi();
+    }, [fetchApi]);
+    const handleReload = () => {
+        fetchApi();
+    }
     return (
         <>
             <Button className='mb-4' onClick={() => setIsGrid(false)}> <UnorderedListOutlined /> </Button>
@@ -26,7 +29,7 @@ const ListRoom = () => {
             {isGrid ? (
                 <RoomGrid rooms={rooms} />
             ) : (<>
-                <RoomTable rooms={rooms} />
+                <RoomTable rooms={rooms} onReload={handleReload} />
             </>)}
 
 

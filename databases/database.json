@@ -18,30 +18,24 @@
       "services": [
         "Thuê ô tô 16 chỗ"
       ]
+    },
+    {
+      "id": "f9ca",
+      "time": "10 giờ",
+      "fullName": "Hoang a Dung",
+      "phone": "0869751207",
+      "email": "hoangdung6226@gmail.com",
+      "date": [
+        "11/03/2026",
+        "13/04/2026"
+      ],
+      "gift": "Áo phông",
+      "services": [
+        "Thuê ô tô 7 chỗ"
+      ]
     }
   ],
   "rooms": [
-    {
-      "id": "cc3d",
-      "name": "dasdas",
-      "quantityBed": 1,
-      "quantityPeople": 2,
-      "description": "dqwede",
-      "utils": [
-        "Wifi"
-      ]
-    },
-    {
-      "id": "2b65",
-      "name": "dasdas",
-      "quantityBed": 1,
-      "quantityPeople": 2,
-      "description": "dqwede",
-      "utils": [
-        "Wifi"
-      ],
-      "status": true
-    },
     {
       "id": "c78e",
       "name": "dasdas",
@@ -51,29 +45,8 @@
       "utils": [
         "Wifi"
       ],
-      "status": false
-    },
-    {
-      "id": "2cf6",
-      "name": "hoangdung",
-      "quantityBed": 2,
-      "quantityPeople": 3,
-      "description": "def",
-      "utils": [
-        "Wifi",
-        "Nóng lạnh"
-      ]
-    },
-    {
-      "id": "ccb6",
-      "name": "hoangdung",
-      "quantityBed": 2,
-      "quantityPeople": 3,
-      "description": "def",
-      "utils": [
-        "Wifi",
-        "Nóng lạnh"
-      ]
+      "status": true,
+      "typeRooms": true
     },
     {
       "id": "f31a",
@@ -81,26 +54,6 @@
       "quantityBed": 1,
       "quantityPeople": 2,
       "description": "eff",
-      "utils": [
-        "Nóng lạnh"
-      ]
-    },
-    {
-      "id": "6a12",
-      "name": "121",
-      "quantityBed": 1,
-      "quantityPeople": 1,
-      "description": "1",
-      "utils": [
-        "Wifi"
-      ]
-    },
-    {
-      "id": "9154",
-      "name": "hoangdung",
-      "quantityBed": 1,
-      "quantityPeople": 2,
-      "description": "222",
       "utils": [
         "Nóng lạnh"
       ]
@@ -138,6 +91,67 @@
       "quantityPeople": 6,
       "description": "ef",
       "utils": [],
+      "status": false,
+      "typeRooms": true
+    },
+    {
+      "id": "17ef",
+      "name": "Phòng 1",
+      "quantityBed": 5,
+      "quantityPeople": 6,
+      "description": "few",
+      "utils": [
+        "Wifi",
+        "Nóng lạnh"
+      ],
+      "status": true,
+      "typeRooms": true
+    },
+    {
+      "id": "4f93",
+      "name": "dasdas",
+      "quantityBed": 1,
+      "quantityPeople": 2,
+      "description": "dqwede",
+      "utils": [
+        "Wifi"
+      ],
+      "status": false,
+      "typeRooms": true
+    },
+    {
+      "id": "4d5d",
+      "name": "das",
+      "quantityBed": 1,
+      "quantityPeople": 2,
+      "description": "dqwede",
+      "utils": [
+        "Wifi"
+      ],
+      "status": false,
+      "typeRooms": true
+    },
+    {
+      "id": "7478",
+      "name": "dasdas",
+      "quantityBed": 1,
+      "quantityPeople": 3,
+      "description": "dqwede",
+      "utils": [
+        "Wifi"
+      ],
+      "status": false,
+      "typeRooms": true
+    },
+    {
+      "id": "e482",
+      "name": "dasdas",
+      "quantityBed": 1,
+      "quantityPeople": 3,
+      "description": "dqwede",
+      "utils": [
+        "Wifi"
+      ],
       "status": false,
       "typeRooms": true
     }

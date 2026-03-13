@@ -1,22 +1,26 @@
 import { DeleteOutlined } from '@ant-design/icons';
-import { Button, Popconfirm } from 'antd';
+import { Button, Popconfirm, message } from 'antd';
 import React from 'react'
 import { DeleteRoomServices } from '../../services/RoomServices';
 
-const DeleteRoom = (props) => {
-    const { record } = props;
+const DeleteRoom = ({ record, onReload }) => {
+    const [messageApi, contextHolder] = message.useMessage();
+
     const handleDelete = async (id) => {
         const response = await DeleteRoomServices(id);
         if (response) {
-            alert("Xóa phòng thành công");
+            messageApi.success("Xóa phòng thành công");
+            onReload();
         } else {
-            alert("Xóa phòng thất bại");
+            messageApi.error("Xóa phòng thất bại");
         }
     }
+
     return (
         <>
-            <Popconfirm title="Bạn có chắc muốn xóa" onConfirm={() => handleDelete(record.id)}>
-                <Button type="primary" icon={<DeleteOutlined />} danger />
+            {contextHolder}
+            <Popconfirm title="Bạn có chắc muốn xóa?" onConfirm={() => handleDelete(record.id)}>
+                <Button type="primary" ghost danger icon={<DeleteOutlined />} />
             </Popconfirm>
         </>
     )
